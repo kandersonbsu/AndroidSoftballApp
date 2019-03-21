@@ -2,9 +2,10 @@ package com.example.softballapp
 
 import io.objectbox.annotation.Entity
 import io.objectbox.annotation.Id
+import io.objectbox.relation.ToOne
 
 @Entity
-public class Player(@Id var id:Long, var firstName: String, var lastName: String, var position: Position)
+data class Player(@Id var id: Long = 0, var firstName: String, var lastName: String)
 {
-
+    lateinit var team: ToOne<Team>
 }
