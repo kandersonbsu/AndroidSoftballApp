@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:5234193046593124548",
-      "lastPropertyId": "3:3389238201913350744",
+      "lastPropertyId": "4:5398787452417214063",
       "name": "Player",
       "properties": [
         {
@@ -19,14 +19,40 @@
         {
           "id": "3:3389238201913350744",
           "name": "lastName"
+        },
+        {
+          "id": "4:5398787452417214063",
+          "indexId": "1:6615691189836893951",
+          "name": "teamId"
         }
       ],
       "relations": []
+    },
+    {
+      "id": "3:3498914259424255619",
+      "lastPropertyId": "2:4781408845606248404",
+      "name": "Team",
+      "properties": [
+        {
+          "id": "1:8409061651568156992",
+          "name": "id"
+        },
+        {
+          "id": "2:4781408845606248404",
+          "name": "teamName"
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:5326776348677608839",
+          "name": "players"
+        }
+      ]
     }
   ],
-  "lastEntityId": "2:2620412415342771377",
-  "lastIndexId": "0:0",
-  "lastRelationId": "0:0",
+  "lastEntityId": "3:3498914259424255619",
+  "lastIndexId": "1:6615691189836893951",
+  "lastRelationId": "1:5326776348677608839",
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,

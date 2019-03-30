@@ -22,13 +22,6 @@
         }
       ],
       "relations": []
-    },
-    {
-      "id": "2:2620412415342771377",
-      "lastPropertyId": "0:0",
-      "name": "Position",
-      "properties": [],
-      "relations": []
     }
   ],
   "lastEntityId": "2:2620412415342771377",
@@ -37,7 +30,9 @@
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
-  "retiredEntityUids": [],
+  "retiredEntityUids": [
+    2620412415342771377
+  ],
   "retiredIndexUids": [],
   "retiredPropertyUids": [],
   "retiredRelationUids": [],

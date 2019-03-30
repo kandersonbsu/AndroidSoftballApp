@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SoftballApp</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="choose_a_password">Choose a password:</string>
+    <string name="email">Email</string>
+    <string name="ok">OK</string>
+    <string name="team_name">Team Name:</string>
+    <string name="location">Location:</string>
 </resources>
