@@ -15,6 +15,14 @@
             app:layout_constraintHorizontal_bias="0.502" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/signin"/>
     <Button
+            android:text="Show Teams"
+            android:layout_width="210dp"
+            android:layout_height="43dp"
+            android:id="@+id/showTeams" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" style="@style/Widget.AppCompat.Button.Small"
+            app:layout_constraintHorizontal_bias="0.489" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="68dp" app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
             android:text="Sign In"
             android:layout_width="201dp"
             android:layout_height="wrap_content"
@@ -23,4 +31,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/TeamsText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="312dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"/>
 </android.support.constraint.ConstraintLayout>

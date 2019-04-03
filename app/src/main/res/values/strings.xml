@@ -7,4 +7,5 @@
     <string name="ok">OK</string>
     <string name="team_name">Team Name:</string>
     <string name="location">Location:</string>
+    <string name="title_activity_homepage">activity_homepage</string>
 </resources>
