@@ -12,7 +12,6 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        val db = Database()
         var teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
         val okButton:Button = findViewById(R.id.OK)
         val teamNameText:EditText = findViewById(R.id.TeamNameText)
@@ -21,7 +20,7 @@ class SignupActivity : AppCompatActivity() {
 
 
         okButton.setOnClickListener {
-            var team = Team(teamNameText.toString(), managerNameText.toString(), locationText.toString())
+            var team = Team(teamNameText.text.toString(), managerNameText.text.toString(), locationText.text.toString())
             teamBox.put(team)
             val intent = Intent(this, MainActivity::class.java)
             startActivityForResult(intent, 42)

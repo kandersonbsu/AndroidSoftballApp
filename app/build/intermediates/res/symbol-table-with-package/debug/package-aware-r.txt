@@ -1090,8 +1090,6 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
-id editText
-id editText2
 id editText7
 id editText8
 id edit_query
@@ -1190,6 +1188,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner
 id split_action_bar
 id spread
 id spread_inside
@@ -1210,8 +1209,6 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
-id textView2
 id textView4
 id textView5
 id textView6
