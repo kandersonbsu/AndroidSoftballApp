@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity(),TeamFragment.OnFragmentInteractionListe
 
     lateinit var teamFrag:TeamFragment
     lateinit var mainFrag:MainFragment
+    lateinit var teamBox:ObjectBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity(),TeamFragment.OnFragmentInteractionListe
         val menuButton:ImageButton = findViewById(R.id.imageButton)
         teamFrag = TeamFragment.newInstance()
         mainFrag = MainFragment.newInstance()
+        var teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
 
         //Default Fragment when app opens
         supportFragmentManager
@@ -50,5 +52,7 @@ class MainActivity : AppCompatActivity(),TeamFragment.OnFragmentInteractionListe
         }
 
     }
+
+
 
 }

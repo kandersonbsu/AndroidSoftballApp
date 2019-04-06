@@ -1087,6 +1087,7 @@ id container
 id content
 id contentPanel
 id coordinator
+id createTeam
 id createTeamButton
 id custom
 id customPanel
@@ -1137,7 +1138,9 @@ id line1
 id line3
 id listMode
 id list_item
+id locationText
 id loginButton
+id managerName
 id masked
 id media_actions
 id message
@@ -1217,6 +1220,7 @@ id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id teamName
 id text
 id text2
 id textSpacerNoButtons

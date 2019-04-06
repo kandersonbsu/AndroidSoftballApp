@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\KYLEANDERSON\\StudioProjects\\AndroidSoftballApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\kande\\AndroidStudioProjects\\SoftballApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\KYLEANDERSON\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7aa0bd1473255077f5abe1dbcdb4c20e\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\kande\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\f52fd0682fefce262d662b943925ee40\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\KYLEANDERSON\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\f463711f8bed14aeff1c1eb6380e45d9\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\kande\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\1eafb9aebea681e00d90cea98389ec33\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
