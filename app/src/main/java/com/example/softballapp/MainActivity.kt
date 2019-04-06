@@ -1,42 +1,54 @@
- package com.example.softballapp
+package com.example.softballapp
 
-import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
+import android.support.design.widget.Snackbar
+import android.support.v4.app.FragmentTransaction
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button
-import android.widget.EditText
-import io.objectbox.kotlin.query
+import android.widget.ImageButton
 
- class MainActivity : AppCompatActivity() {
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity(),TeamFragment.OnFragmentInteractionListener, MainFragment.OnFragmentInteractionListener, CreateTeamFragment.OnFragmentInteractionListener {
+    override fun onFragmentInteraction(uri: Uri) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    lateinit var teamFrag:TeamFragment
+    lateinit var mainFrag:MainFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
-        val signupButton:Button = findViewById(R.id.signup)
-        val signinButton:Button = findViewById(R.id.signin)
-        val showTeamsDebug:Button = findViewById(R.id.showTeams)
-        val teamsDisplay:EditText = findViewById(R.id.TeamsText)
+        setSupportActionBar(toolbar)
 
-        signupButton.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
-            startActivityForResult(intent, 42)
+        val menuButton:ImageButton = findViewById(R.id.imageButton)
+        teamFrag = TeamFragment.newInstance()
+        mainFrag = MainFragment.newInstance()
+
+        //Default Fragment when app opens
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.content, mainFrag)
+            .addToBackStack(mainFrag.toString())
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .commit()
+
+        menuButton.setOnClickListener {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.content, teamFrag)
+                .addToBackStack(teamFrag.toString())
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit()
         }
 
-        signinButton.setOnClickListener {
-            val intent = Intent(this, SigninActivity::class.java)
-            startActivityForResult(intent, 42)
+        fab.setOnClickListener { view ->
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
         }
-
-        showTeamsDebug.setOnClickListener {
-            val query = teamBox.query() {
-                order(Team_.teamName)
-            }
-            val results = query.find()
-            teamsDisplay.setText(results.count().toString())
-        }
-
 
     }
- }
 
+}
