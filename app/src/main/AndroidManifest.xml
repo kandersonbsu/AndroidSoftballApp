@@ -11,6 +11,16 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
+                android:name=".MenuActivity"
+                android:label="@string/title_activity_menu"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".TeamActivity"
+                android:label="@string/title_activity_team"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
                 android:name=".MainActivity"
                 android:label="@string/title_activity_main"
                 android:theme="@style/AppTheme.NoActionBar">

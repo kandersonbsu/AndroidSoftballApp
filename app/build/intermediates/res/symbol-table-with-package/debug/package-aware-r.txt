@@ -1086,8 +1086,8 @@ id collapseActionView
 id container
 id content
 id contentPanel
+id contentTeam
 id coordinator
-id createTeam
 id createTeamButton
 id custom
 id customPanel
@@ -1116,6 +1116,7 @@ id fill_vertical
 id filled
 id fixed
 id forever
+id frameLayout
 id ghost_view
 id gone
 id group_divider
@@ -1127,6 +1128,7 @@ id icon_group
 id ifRoom
 id image
 id imageButton
+id imageButton2
 id info
 id invisible
 id italic
@@ -1159,6 +1161,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numTeamsText
 id outline
 id packed
 id parallax
@@ -1197,6 +1200,7 @@ id selected
 id shortcut
 id showCustom
 id showHome
+id showNumTeams
 id showTitle
 id smallLabel
 id snackbar_action
@@ -1204,6 +1208,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner
 id split_action_bar
 id spread
 id spread_inside
@@ -1226,6 +1231,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1300,7 +1306,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_team
 layout content_main
+layout content_team
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1316,8 +1324,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_create_team
+layout fragment_homepage
 layout fragment_main
 layout fragment_team
+layout fragment_team_login
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
@@ -1409,6 +1419,7 @@ string team_name
 string title_activity_homepage
 string title_activity_main
 string title_activity_signup
+string title_activity_team
 string title_dashboard
 string title_home
 string title_notifications

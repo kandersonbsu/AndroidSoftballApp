@@ -21,6 +21,11 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.example.softballapp.TeamActivity"
+            android:label="@string/title_activity_team"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
             android:name="com.example.softballapp.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" >

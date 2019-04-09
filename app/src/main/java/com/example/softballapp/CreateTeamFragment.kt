@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentTransaction
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import io.objectbox.BoxStore
 
 
@@ -26,14 +28,11 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  *
  */
-class CreateTeamFragment : Fragment(), View.OnClickListener {
+class CreateTeamFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
-    lateinit var teamName:TextInputEditText
-    lateinit var managerName:TextInputEditText
-    lateinit var location:TextInputEditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,20 +41,6 @@ class CreateTeamFragment : Fragment(), View.OnClickListener {
             param2 = it.getString(ARG_PARAM2)
         }
 
-        teamName = view!!.findViewById(R.id.teamName)
-        managerName = view!!.findViewById(R.id.managerName)
-        location = view!!.findViewById(R.id.locationText)
-        var teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
-
-    }
-    override fun onClick(v: View?) {
-        when(v?.id) {
-            R.id.createTeam -> {
-                var team:Team  = Team(teamName.text.toString(),
-                    managerName.text.toString(),
-                    location.text.toString())
-            }
-        }
     }
 
     override fun onCreateView(
@@ -63,7 +48,18 @@ class CreateTeamFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create_team, container, false)
+        var view:View = inflater.inflate(R.layout.fragment_create_team, container, false)
+        val createTeamButton: Button = view.findViewById(R.id.createTeamButton)
+
+        val teamName: EditText = view.findViewById(R.id.teamName)
+        val managerName: EditText = view.findViewById(R.id.managerName)
+        val locationText: EditText = view.findViewById(R.id.locationText)
+        val teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
+
+        createTeamButton.setOnClickListener {
+            teamBox.put(Team(teamName.text.toString(), managerName.text.toString(), locationText.text.toString()))
+        }
+        return view
     }
 
     // TODO: Rename method, update argument and hook method into UI event

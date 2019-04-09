@@ -10,6 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
+import io.objectbox.kotlin.query
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -28,6 +30,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class MainFragment : Fragment(),View.OnClickListener {
     lateinit var newTeamFrag:CreateTeamFragment
+    lateinit var teamLoginFrag:TeamLoginFragment
 
 
     // TODO: Rename and change types of parameters
@@ -42,6 +45,7 @@ class MainFragment : Fragment(),View.OnClickListener {
             param2 = it.getString(ARG_PARAM2)
         }
         newTeamFrag = CreateTeamFragment.newInstance()
+        teamLoginFrag = TeamLoginFragment.newInstance()
 
 
     }
@@ -51,12 +55,7 @@ class MainFragment : Fragment(),View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id) {
             R.id.createTeamButton -> {
-                fragmentManager!!
-                    .beginTransaction()
-                    .replace(R.id.content, newTeamFrag)
-                    .addToBackStack(newTeamFrag.toString())
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
+                CreateFragment(newTeamFrag)
             }
         }
     }
@@ -68,7 +67,21 @@ class MainFragment : Fragment(),View.OnClickListener {
         // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_main, container, false)
         val cb:Button = view.findViewById(R.id.createTeamButton)
+        val loginButton:Button = view.findViewById(R.id.loginButton)
+        val showTeams:Button = view.findViewById(R.id.showNumTeams)
+        val numTeams: TextView = view.findViewById(R.id.numTeamsText)
+        var teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
         cb.setOnClickListener(this)
+        showTeams.setOnClickListener {
+            val query = teamBox.query {
+                order(Team_.teamName)
+            }
+            val results = query.find()
+            numTeams.text = results.count().toString()
+        }
+        loginButton.setOnClickListener {
+            CreateFragment(teamLoginFrag)
+        }
         return view
     }
 
@@ -105,6 +118,15 @@ class MainFragment : Fragment(),View.OnClickListener {
     interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         fun onFragmentInteraction(uri: Uri)
+    }
+
+    fun CreateFragment(frag:Fragment): Unit{
+        fragmentManager!!
+            .beginTransaction()
+            .replace(R.id.content, frag)
+            .addToBackStack(frag.toString())
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .commit()
     }
 
     companion object {
