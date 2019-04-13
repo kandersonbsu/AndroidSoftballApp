@@ -1,17 +1,19 @@
-package com.example.softballapp
+package com.example.softballapp.Fragments
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.support.design.widget.TextInputEditText
 import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentTransaction
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.EditText
-import io.objectbox.BoxStore
+import android.widget.Spinner
+import com.example.softballapp.*
+import com.example.softballapp.Activities.TeamActivity
+import io.objectbox.kotlin.query
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,13 +24,13 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [CreateTeamFragment.OnFragmentInteractionListener] interface
+ * [TeamLoginFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [CreateTeamFragment.newInstance] factory method to
+ * Use the [TeamLoginFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class CreateTeamFragment : Fragment() {
+class TeamLoginFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -40,25 +42,37 @@ class CreateTeamFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
     }
 
+    //https://stackoverflow.com/questions/45735830/button-inside-a-fragment
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var view:View = inflater.inflate(R.layout.fragment_create_team, container, false)
-        val createTeamButton: Button = view.findViewById(R.id.createTeamButton)
-
-        val teamName: EditText = view.findViewById(R.id.teamName)
-        val managerName: EditText = view.findViewById(R.id.managerName)
-        val locationText: EditText = view.findViewById(R.id.locationText)
-        val teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
-
-        createTeamButton.setOnClickListener {
-            teamBox.put(Team(teamName.text.toString(), managerName.text.toString(), locationText.text.toString()))
+        var teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
+        var teams:MutableList<String> = ArrayList()
+        val view:View = inflater.inflate(R.layout.fragment_team_login, container, false)
+        val spinner:Spinner = view.findViewById(R.id.spinner)
+        val login:Button = view.findViewById(R.id.loginButton)
+        val query = teamBox.query {
+            order(Team_.teamName)
         }
+        val results = query.find()
+
+        //Populate the spinner
+        //https://stackoverflow.com/questions/37766715/context-for-arrayadapter-in-fragment-class
+        for(team in results)
+            teams.add(team.teamName)
+        val dataAdapter = ArrayAdapter<String>(activity, android.R.layout.simple_spinner_dropdown_item, teams)
+        spinner.adapter = dataAdapter
+
+        //Login button listener
+        login.setOnClickListener {
+            val intent = Intent(activity, TeamActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
     }
 
@@ -104,12 +118,12 @@ class CreateTeamFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment CreateTeamFragment.
+         * @return A new instance of fragment TeamLoginFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
-            CreateTeamFragment().apply {
+            TeamLoginFragment().apply {
 
             }
     }

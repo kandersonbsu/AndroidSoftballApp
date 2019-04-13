@@ -12,13 +12,13 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int objectbox_notification = 0x7f07007a;
-        public static final int objectbox_stop = 0x7f07007b;
+        public static final int objectbox_notification = 0x7f070082;
+        public static final int objectbox_stop = 0x7f070083;
     }
     public static final class string {
         private string() {}
 
-        public static final int objectbox_objectBrowserNotificationText = 0x7f0e0035;
-        public static final int objectbox_objectBrowserNotificationTitle = 0x7f0e0036;
+        public static final int objectbox_objectBrowserNotificationText = 0x7f0e003b;
+        public static final int objectbox_objectBrowserNotificationTitle = 0x7f0e003c;
     }
 }

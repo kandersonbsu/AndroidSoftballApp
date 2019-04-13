@@ -1,7 +1,6 @@
-package com.example.softballapp
+package com.example.softballapp.Fragments
 
 import android.content.Context
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -9,9 +8,12 @@ import android.support.v4.app.FragmentTransaction
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.Spinner
+import android.widget.TextView
+import com.example.softballapp.ObjectBox
+import com.example.softballapp.R
+import com.example.softballapp.Team
+import com.example.softballapp.Team_
 import io.objectbox.kotlin.query
 
 
@@ -23,13 +25,17 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [TeamLoginFragment.OnFragmentInteractionListener] interface
+ * [MainFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [TeamLoginFragment.newInstance] factory method to
+ * Use the [MainFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class TeamLoginFragment : Fragment() {
+class MainFragment : Fragment(),View.OnClickListener {
+    lateinit var newTeamFrag: CreateTeamFragment
+    lateinit var teamLoginFrag: TeamLoginFragment
+
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -41,37 +47,44 @@ class TeamLoginFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        newTeamFrag = CreateTeamFragment.newInstance()
+        teamLoginFrag = TeamLoginFragment.newInstance()
+
+
+    }
+    //https://stackoverflow.com/questions/7508044/android-fragment-no-view-found-for-id
+    //https://stackoverflow.com/questions/47014469/only-safe-or-non-null-assserted-calls-are-allowed-on-a-nullable-receiver-type-of
+    
+    override fun onClick(v: View?) {
+        when(v?.id) {
+            R.id.createTeamButton -> {
+                CreateFragment(newTeamFrag)
+            }
+        }
     }
 
-    //https://stackoverflow.com/questions/45735830/button-inside-a-fragment
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        val view:View = inflater.inflate(R.layout.fragment_main, container, false)
+        val cb:Button = view.findViewById(R.id.createTeamButton)
+        val loginButton:Button = view.findViewById(R.id.loginButton)
+        val showTeams:Button = view.findViewById(R.id.showNumTeams)
+        val numTeams: TextView = view.findViewById(R.id.numTeamsText)
         var teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
-        var teams:MutableList<String> = ArrayList()
-        val view:View = inflater.inflate(R.layout.fragment_team_login, container, false)
-        val spinner:Spinner = view.findViewById(R.id.spinner)
-        val login:Button = view.findViewById(R.id.loginButton)
-        val query = teamBox.query {
-            order(Team_.teamName)
+        cb.setOnClickListener(this)
+        showTeams.setOnClickListener {
+            val query = teamBox.query {
+                order(Team_.teamName)
+            }
+            val results = query.find()
+            numTeams.text = results.count().toString()
         }
-        val results = query.find()
-
-        //Populate the spinner
-        //https://stackoverflow.com/questions/37766715/context-for-arrayadapter-in-fragment-class
-        for(team in results)
-            teams.add(team.teamName)
-        val dataAdapter = ArrayAdapter<String>(activity, android.R.layout.simple_spinner_dropdown_item, teams)
-        spinner.adapter = dataAdapter
-
-        //Login button listener
-        login.setOnClickListener {
-            val intent = Intent(activity, TeamActivity::class.java)
-            startActivity(intent)
+        loginButton.setOnClickListener {
+            CreateFragment(teamLoginFrag)
         }
-
         return view
     }
 
@@ -110,6 +123,15 @@ class TeamLoginFragment : Fragment() {
         fun onFragmentInteraction(uri: Uri)
     }
 
+    fun CreateFragment(frag:Fragment): Unit{
+        fragmentManager!!
+            .beginTransaction()
+            .replace(R.id.content, frag)
+            .addToBackStack(frag.toString())
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .commit()
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -117,12 +139,12 @@ class TeamLoginFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment TeamLoginFragment.
+         * @return A new instance of fragment MainFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
-            TeamLoginFragment().apply {
+            MainFragment().apply {
 
             }
     }

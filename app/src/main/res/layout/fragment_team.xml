@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".TeamFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".Fragments.TeamFragment" android:id="@+id/constraintLayout">
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Create Team"/>
-
-</android.support.v4.widget.DrawerLayout>
+            android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.49">
+        <TextView
+                android:text="              Lineup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView6" android:layout_weight="1"
+                android:fontFamily="sans-serif-black" android:typeface="sans" android:textSize="36sp"
+                android:lineSpacingExtra="30sp" android:textColor="@android:color/background_dark"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="Player Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView10" android:layout_weight="1"
+                    android:textSize="18sp"/>
+            <TextView
+                    android:text="Position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView9" android:layout_weight="1"
+                    android:textSize="18sp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="1">
+            <TextView
+                    android:text="Test Player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView12" android:layout_weight="1"/>
+            <TextView
+                    android:text="First Base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView11" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -889,6 +889,8 @@ dimen mtrl_textinput_box_stroke_width_default
 dimen mtrl_textinput_box_stroke_width_focused
 dimen mtrl_textinput_outline_box_expanded_padding
 dimen mtrl_toolbar_default_height
+dimen nav_header_height
+dimen nav_header_vertical_spacing
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -1013,10 +1015,18 @@ drawable ic_dashboard_black_24dp
 drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_menu
+drawable ic_menu_camera
+drawable ic_menu_gallery
+drawable ic_menu_manage
+drawable ic_menu_send
+drawable ic_menu_share
+drawable ic_menu_slideshow
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable ic_view_headline_black_24dp
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1034,6 +1044,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable objectbox_notification
 drawable objectbox_stop
+drawable side_nav_bar
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1059,6 +1070,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1083,6 +1095,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id constraintLayout
 id container
 id content
 id contentPanel
@@ -1129,6 +1142,7 @@ id ifRoom
 id image
 id imageButton
 id imageButton2
+id imageView
 id info
 id invisible
 id italic
@@ -1151,6 +1165,12 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id nav_camera
+id nav_gallery
+id nav_manage
+id nav_send
+id nav_share
+id nav_slideshow
 id navigation_dashboard
 id navigation_header_container
 id navigation_home
@@ -1202,6 +1222,7 @@ id showCustom
 id showHome
 id showNumTeams
 id showTitle
+id slideContent
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1232,6 +1253,11 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView10
+id textView11
+id textView12
+id textView6
+id textView9
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1307,7 +1333,11 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_team
+layout app_bar_drawer
+layout app_bar_menu
+layout content_drawer
 layout content_main
+layout content_menu
 layout content_team
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1330,6 +1360,8 @@ layout fragment_team
 layout fragment_team_login
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
+layout nav_header_drawer
+layout nav_header_menu
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1349,6 +1381,10 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu activity_drawer_drawer
+menu activity_menu_drawer
+menu drawer
+menu menu
 menu navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -1391,6 +1427,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_settings
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -1405,6 +1442,11 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string location
 string mtrl_chip_close_icon_content_description
+string nav_header_desc
+string nav_header_subtitle
+string nav_header_title
+string navigation_drawer_close
+string navigation_drawer_open
 string objectbox_objectBrowserNotificationText
 string objectbox_objectBrowserNotificationTitle
 string ok
@@ -1416,8 +1458,10 @@ string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
 string team_name
+string title_activity_drawer
 string title_activity_homepage
 string title_activity_main
+string title_activity_menu
 string title_activity_signup
 string title_activity_team
 string title_dashboard

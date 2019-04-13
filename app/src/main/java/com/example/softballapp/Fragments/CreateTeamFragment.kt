@@ -1,4 +1,4 @@
-package com.example.softballapp
+package com.example.softballapp.Fragments
 
 import android.content.Context
 import android.net.Uri
@@ -7,6 +7,11 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import com.example.softballapp.ObjectBox
+import com.example.softballapp.R
+import com.example.softballapp.Team
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -17,13 +22,13 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [TeamFragment.OnFragmentInteractionListener] interface
+ * [CreateTeamFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [TeamFragment.newInstance] factory method to
+ * Use the [CreateTeamFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class TeamFragment : Fragment() {
+class CreateTeamFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,6 +40,7 @@ class TeamFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
@@ -42,7 +48,24 @@ class TeamFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_team, container, false)
+        var view:View = inflater.inflate(R.layout.fragment_create_team, container, false)
+        val createTeamButton: Button = view.findViewById(R.id.createTeamButton)
+
+        val teamName: EditText = view.findViewById(R.id.teamName)
+        val managerName: EditText = view.findViewById(R.id.managerName)
+        val locationText: EditText = view.findViewById(R.id.locationText)
+        val teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
+
+        createTeamButton.setOnClickListener {
+            teamBox.put(
+                Team(
+                    teamName.text.toString(),
+                    managerName.text.toString(),
+                    locationText.text.toString()
+                )
+            )
+        }
+        return view
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -87,12 +110,12 @@ class TeamFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment TeamFragment.
+         * @return A new instance of fragment CreateTeamFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
-            TeamFragment().apply {
+            CreateTeamFragment().apply {
 
             }
     }

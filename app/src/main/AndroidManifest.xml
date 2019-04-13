@@ -11,17 +11,22 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".MenuActivity"
+                android:name=".Activities.DrawerActivity"
+                android:label="@string/title_activity_drawer"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".Activities.MenuActivity"
                 android:label="@string/title_activity_menu"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".TeamActivity"
+                android:name=".Activities.TeamActivity"
                 android:label="@string/title_activity_team"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".MainActivity"
+                android:name=".Activities.MainActivity"
                 android:label="@string/title_activity_main"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-54:12
 MERGED from [io.objectbox:objectbox-android:2.3.4] C:\Users\KYLEANDERSON\.gradle\caches\transforms-1\files-1.1\objectbox-android-2.3.4.aar\fd84dfba894482339265945155791fc4\AndroidManifest.xml:2:1-25:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\KYLEANDERSON\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\e6336b0a974fbe71f1c8c77e2a520463\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\KYLEANDERSON\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\7aa0bd1473255077f5abe1dbcdb4c20e\AndroidManifest.xml:17:1-22:12
@@ -38,25 +38,25 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\KYLEANDERSON\.gra
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\KYLEANDERSON\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\bdfaf824d60a5132e9f5cc5301f55813\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\KYLEANDERSON\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\f74843662f8b7a5eb9cea1639a7946b2\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\KYLEANDERSON\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3ece58c0145a70cb86dcfa0fc5fc7510\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:3:11-44
 		INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-44:12
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-54:12
 		INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-44:12
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:1-54:12
 		INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:5:5-42:19
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:5:5-52:19
 MERGED from [io.objectbox:objectbox-android:2.3.4] C:\Users\KYLEANDERSON\.gradle\caches\transforms-1\files-1.1\objectbox-android-2.3.4.aar\fd84dfba894482339265945155791fc4\AndroidManifest.xml:21:5-23:31
 MERGED from [io.objectbox:objectbox-android:2.3.4] C:\Users\KYLEANDERSON\.gradle\caches\transforms-1\files-1.1\objectbox-android-2.3.4.aar\fd84dfba894482339265945155791fc4\AndroidManifest.xml:21:5-23:31
 MERGED from [com.android.support:design:28.0.0] C:\Users\KYLEANDERSON\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\e6336b0a974fbe71f1c8c77e2a520463\AndroidManifest.xml:22:5-20
@@ -87,56 +87,72 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\KYLEANDERS
 		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:12:13-44
 	android:name
 		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:6:13-37
-activity#com.example.softballapp.TeamActivity
+activity#com.example.softballapp.Activities.DrawerActivity
 ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:13:9-17:20
 	android:label
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:15:17-60
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:15:17-62
 	android:theme
 		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:16:17-60
 	android:name
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:14:17-45
-activity#com.example.softballapp.MainActivity
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:18:9-27:20
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:14:17-58
+activity#com.example.softballapp.Activities.MenuActivity
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:18:9-22:20
 	android:label
 		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:20:17-60
 	android:theme
 		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:21:17-60
 	android:name
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:19:17-45
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:19:17-56
+activity#com.example.softballapp.Activities.TeamActivity
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:23:9-27:20
+	android:label
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:25:17-60
+	android:theme
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:26:17-60
+	android:name
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:24:17-56
+activity#com.example.softballapp.Activities.MainActivity
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:28:9-37:20
+	android:label
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:30:17-60
+	android:theme
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:31:17-60
+	android:name
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:29:17-56
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:23:17-68
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:33:17-68
 	android:name
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:25:17-76
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:35:17-76
 	android:name
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:35:27-74
 activity#com.example.softballapp.HomepageActivity
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:28:9-29:20
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:38:9-39:20
 	android:name
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:28:19-51
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:38:19-51
 activity#com.example.softballapp.activity_homepage
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:30:9-34:20
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:40:9-44:20
 	android:label
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:32:17-64
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:42:17-64
 	android:theme
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:33:17-60
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:43:17-60
 	android:name
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:31:17-50
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:41:17-50
 activity#com.example.softballapp.SigninActivity
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:35:9-36:20
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:45:9-46:20
 	android:name
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:35:19-49
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:45:19-49
 activity#com.example.softballapp.SignupActivity
-ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:37:9-41:20
+ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:47:9-51:20
 	android:label
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:39:17-62
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:49:17-62
 	android:theme
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:40:17-60
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:50:17-60
 	android:name
-		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:38:17-47
+		ADDED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml:48:17-47
 uses-sdk
 INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\KYLEANDERSON\StudioProjects\AndroidSoftballApp\app\src\main\AndroidManifest.xml

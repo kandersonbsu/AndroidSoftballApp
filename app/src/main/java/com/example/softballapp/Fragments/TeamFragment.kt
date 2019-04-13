@@ -1,17 +1,13 @@
-package com.example.softballapp
+package com.example.softballapp.Fragments
 
 import android.content.Context
-import android.content.DialogInterface
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentTransaction
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import io.objectbox.kotlin.query
+import com.example.softballapp.R
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,17 +18,13 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [MainFragment.OnFragmentInteractionListener] interface
+ * [TeamFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [MainFragment.newInstance] factory method to
+ * Use the [TeamFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class MainFragment : Fragment(),View.OnClickListener {
-    lateinit var newTeamFrag:CreateTeamFragment
-    lateinit var teamLoginFrag:TeamLoginFragment
-
-
+class TeamFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -44,20 +36,6 @@ class MainFragment : Fragment(),View.OnClickListener {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        newTeamFrag = CreateTeamFragment.newInstance()
-        teamLoginFrag = TeamLoginFragment.newInstance()
-
-
-    }
-    //https://stackoverflow.com/questions/7508044/android-fragment-no-view-found-for-id
-    //https://stackoverflow.com/questions/47014469/only-safe-or-non-null-assserted-calls-are-allowed-on-a-nullable-receiver-type-of
-    
-    override fun onClick(v: View?) {
-        when(v?.id) {
-            R.id.createTeamButton -> {
-                CreateFragment(newTeamFrag)
-            }
-        }
     }
 
     override fun onCreateView(
@@ -65,24 +43,7 @@ class MainFragment : Fragment(),View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view:View = inflater.inflate(R.layout.fragment_main, container, false)
-        val cb:Button = view.findViewById(R.id.createTeamButton)
-        val loginButton:Button = view.findViewById(R.id.loginButton)
-        val showTeams:Button = view.findViewById(R.id.showNumTeams)
-        val numTeams: TextView = view.findViewById(R.id.numTeamsText)
-        var teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
-        cb.setOnClickListener(this)
-        showTeams.setOnClickListener {
-            val query = teamBox.query {
-                order(Team_.teamName)
-            }
-            val results = query.find()
-            numTeams.text = results.count().toString()
-        }
-        loginButton.setOnClickListener {
-            CreateFragment(teamLoginFrag)
-        }
-        return view
+        return inflater.inflate(R.layout.fragment_team, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -120,15 +81,6 @@ class MainFragment : Fragment(),View.OnClickListener {
         fun onFragmentInteraction(uri: Uri)
     }
 
-    fun CreateFragment(frag:Fragment): Unit{
-        fragmentManager!!
-            .beginTransaction()
-            .replace(R.id.content, frag)
-            .addToBackStack(frag.toString())
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-            .commit()
-    }
-
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -136,12 +88,12 @@ class MainFragment : Fragment(),View.OnClickListener {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment MainFragment.
+         * @return A new instance of fragment TeamFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
-            MainFragment().apply {
+            TeamFragment().apply {
 
             }
     }
