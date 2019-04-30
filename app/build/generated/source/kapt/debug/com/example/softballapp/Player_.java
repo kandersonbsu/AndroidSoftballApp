@@ -34,23 +34,31 @@ public final class Player_ implements EntityInfo<Player> {
 
     public final static Player_ __INSTANCE = new Player_();
 
+    public final static io.objectbox.Property<Player> position =
+        new io.objectbox.Property<>(__INSTANCE, 0, 5, String.class, "position");
+
     public final static io.objectbox.Property<Player> id =
-        new io.objectbox.Property<>(__INSTANCE, 0, 1, long.class, "id", true, "id");
+        new io.objectbox.Property<>(__INSTANCE, 1, 1, long.class, "id", true, "id");
 
     public final static io.objectbox.Property<Player> firstName =
-        new io.objectbox.Property<>(__INSTANCE, 1, 2, String.class, "firstName");
+        new io.objectbox.Property<>(__INSTANCE, 2, 2, String.class, "firstName");
 
     public final static io.objectbox.Property<Player> lastName =
-        new io.objectbox.Property<>(__INSTANCE, 2, 3, String.class, "lastName");
+        new io.objectbox.Property<>(__INSTANCE, 3, 3, String.class, "lastName");
+
+    public final static io.objectbox.Property<Player> pos =
+        new io.objectbox.Property<>(__INSTANCE, 4, 6, String.class, "pos");
 
     public final static io.objectbox.Property<Player> teamId =
-        new io.objectbox.Property<>(__INSTANCE, 3, 4, long.class, "teamId", true);
+        new io.objectbox.Property<>(__INSTANCE, 5, 7, long.class, "teamId", true);
 
     @SuppressWarnings("unchecked")
     public final static io.objectbox.Property<Player>[] __ALL_PROPERTIES = new io.objectbox.Property[]{
+        position,
         id,
         firstName,
         lastName,
+        pos,
         teamId
     };
 

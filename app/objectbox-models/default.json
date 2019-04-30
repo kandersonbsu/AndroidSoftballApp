@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:5234193046593124548",
-      "lastPropertyId": "4:5398787452417214063",
+      "lastPropertyId": "7:7543360112426619496",
       "name": "Player",
       "properties": [
         {
@@ -21,8 +21,16 @@
           "name": "lastName"
         },
         {
-          "id": "4:5398787452417214063",
-          "indexId": "1:6615691189836893951",
+          "id": "5:8828787626551640175",
+          "name": "position"
+        },
+        {
+          "id": "6:8598603328777846640",
+          "name": "pos"
+        },
+        {
+          "id": "7:7543360112426619496",
+          "indexId": "2:6400221683615758327",
           "name": "teamId"
         }
       ],
@@ -50,25 +58,29 @@
           "name": "location"
         }
       ],
-      "relations": [
-        {
-          "id": "1:5326776348677608839",
-          "name": "players"
-        }
-      ]
+      "relations": []
     }
   ],
-  "lastEntityId": "3:3498914259424255619",
-  "lastIndexId": "1:6615691189836893951",
-  "lastRelationId": "1:5326776348677608839",
+  "lastEntityId": "4:5347930356396264049",
+  "lastIndexId": "2:6400221683615758327",
+  "lastRelationId": "2:6163529382520444739",
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
   "retiredEntityUids": [
-    2620412415342771377
+    2620412415342771377,
+    5347930356396264049
   ],
-  "retiredIndexUids": [],
-  "retiredPropertyUids": [],
-  "retiredRelationUids": [],
+  "retiredIndexUids": [
+    6615691189836893951
+  ],
+  "retiredPropertyUids": [
+    828063010079635782,
+    5398787452417214063
+  ],
+  "retiredRelationUids": [
+    5326776348677608839,
+    6163529382520444739
+  ],
   "version": 1
 }

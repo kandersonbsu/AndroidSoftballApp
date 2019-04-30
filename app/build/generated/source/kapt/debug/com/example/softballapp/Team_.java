@@ -114,6 +114,12 @@ public final class Team_ implements EntityInfo<Team> {
                     return entity.players;
                 }
             },
-             1);
+            Player_.teamId,
+            new ToOneGetter<Player>() {
+                @Override
+                public ToOne<Team> getToOne(Player entity) {
+                    return entity.team;
+                }
+            });
 
 }

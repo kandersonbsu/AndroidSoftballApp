@@ -25,8 +25,10 @@ public final class PlayerCursor extends Cursor<Player> {
     private static final Player_.PlayerIdGetter ID_GETTER = Player_.__ID_GETTER;
 
 
+    private final static int __ID_position = Player_.position.id;
     private final static int __ID_firstName = Player_.firstName.id;
     private final static int __ID_lastName = Player_.lastName.id;
+    private final static int __ID_pos = Player_.pos.id;
     private final static int __ID_teamId = Player_.teamId.id;
 
     public PlayerCursor(io.objectbox.Transaction tx, long cursor, BoxStore boxStore) {
@@ -54,13 +56,21 @@ public final class PlayerCursor extends Cursor<Player> {
                 targetCursor.close();
             }
         }
+        String position = entity.getPosition();
+        int __id0 = position != null ? __ID_position : 0;
         String firstName = entity.getFirstName();
-        int __id1 = firstName != null ? __ID_firstName : 0;
+        int __id2 = firstName != null ? __ID_firstName : 0;
         String lastName = entity.getLastName();
-        int __id2 = lastName != null ? __ID_lastName : 0;
+        int __id3 = lastName != null ? __ID_lastName : 0;
+        String pos = entity.getPos();
+        int __id4 = pos != null ? __ID_pos : 0;
 
-        long __assignedId = collect313311(cursor, entity.getId(), PUT_FLAG_FIRST | PUT_FLAG_COMPLETE,
-                __id1, firstName, __id2, lastName,
+        collect400000(cursor, 0, PUT_FLAG_FIRST,
+                __id0, position, __id2, firstName,
+                __id3, lastName, __id4, pos);
+
+        long __assignedId = collect313311(cursor, entity.getId(), PUT_FLAG_COMPLETE,
+                0, null, 0, null,
                 0, null, 0, null,
                 __ID_teamId, entity.team.getTargetId(), 0, 0,
                 0, 0, 0, 0,

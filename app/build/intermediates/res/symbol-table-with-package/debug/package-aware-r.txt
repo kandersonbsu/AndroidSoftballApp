@@ -25,6 +25,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array spinner_position
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1049,8 +1050,10 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
 id CTRL
+id Cancel
 id FUNCTION
 id META
+id Position
 id SHIFT
 id SYM
 id action0
@@ -1075,6 +1078,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addPlayer
 id alertTitle
 id all
 id always
@@ -1130,6 +1134,8 @@ id filled
 id fixed
 id forever
 id frameLayout
+id frameLayout2
+id frameLayout3
 id ghost_view
 id gone
 id group_divider
@@ -1149,6 +1155,7 @@ id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id lastName
 id left
 id line1
 id line3
@@ -1190,12 +1197,16 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id playerFirstName
+id playerNum
+id playerTest
 id progress_circular
 id progress_horizontal
 id radio
 id right
 id right_icon
 id right_side
+id savePlayer
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1243,6 +1254,7 @@ id stretch
 id submenuarrow
 id submit_area
 id tabMode
+id tableLayout
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -1256,6 +1268,8 @@ id textView
 id textView10
 id textView11
 id textView12
+id textView2
+id textView4
 id textView6
 id textView9
 id text_input_password_toggle
@@ -1353,6 +1367,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout fragment_add_player
 layout fragment_create_team
 layout fragment_homepage
 layout fragment_main

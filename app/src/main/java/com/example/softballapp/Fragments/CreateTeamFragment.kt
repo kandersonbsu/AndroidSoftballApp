@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import com.example.softballapp.ObjectBox
+import com.example.softballapp.Player
 import com.example.softballapp.R
 import com.example.softballapp.Team
 
@@ -57,13 +58,9 @@ class CreateTeamFragment : Fragment() {
         val teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
 
         createTeamButton.setOnClickListener {
-            teamBox.put(
-                Team(
-                    teamName.text.toString(),
-                    managerName.text.toString(),
-                    locationText.text.toString()
-                )
-            )
+            val t = Team(teamName.text.toString(), managerName.text.toString(), locationText.text.toString())
+            t.players = ArrayList()
+            teamBox.put(t)
         }
         return view
     }

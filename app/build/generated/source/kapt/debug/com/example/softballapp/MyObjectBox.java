@@ -26,21 +26,23 @@ public class MyObjectBox {
 
     private static byte[] getModel() {
         ModelBuilder modelBuilder = new ModelBuilder();
-        modelBuilder.lastEntityId(3, 3498914259424255619L);
-        modelBuilder.lastIndexId(1, 6615691189836893951L);
-        modelBuilder.lastRelationId(1, 5326776348677608839L);
+        modelBuilder.lastEntityId(4, 5347930356396264049L);
+        modelBuilder.lastIndexId(2, 6400221683615758327L);
+        modelBuilder.lastRelationId(2, 6163529382520444739L);
 
         EntityBuilder entityBuilder;
 
         entityBuilder = modelBuilder.entity("Player");
-        entityBuilder.id(1, 5234193046593124548L).lastPropertyId(4, 5398787452417214063L);
+        entityBuilder.id(1, 5234193046593124548L).lastPropertyId(7, 7543360112426619496L);
         entityBuilder.flags(io.objectbox.model.EntityFlags.USE_NO_ARG_CONSTRUCTOR);
+        entityBuilder.property("position", PropertyType.String).id(5, 8828787626551640175L);
         entityBuilder.property("id", PropertyType.Long).id(1, 2714598288725809859L)
             .flags(PropertyFlags.ID | PropertyFlags.NOT_NULL);
         entityBuilder.property("firstName", PropertyType.String).id(2, 2653535537771330058L);
         entityBuilder.property("lastName", PropertyType.String).id(3, 3389238201913350744L);
-        entityBuilder.property("teamId", "Team", "team", PropertyType.Relation).id(4, 5398787452417214063L)
-            .flags(PropertyFlags.NOT_NULL | PropertyFlags.VIRTUAL | PropertyFlags.INDEXED | PropertyFlags.INDEX_PARTIAL_SKIP_ZERO).indexId(1, 6615691189836893951L);
+        entityBuilder.property("pos", PropertyType.String).id(6, 8598603328777846640L);
+        entityBuilder.property("teamId", "Team", "team", PropertyType.Relation).id(7, 7543360112426619496L)
+            .flags(PropertyFlags.NOT_NULL | PropertyFlags.VIRTUAL | PropertyFlags.INDEXED | PropertyFlags.INDEX_PARTIAL_SKIP_ZERO).indexId(2, 6400221683615758327L);
         entityBuilder.entityDone();
 
         entityBuilder = modelBuilder.entity("Team");
@@ -51,8 +53,6 @@ public class MyObjectBox {
         entityBuilder.property("teamName", PropertyType.String).id(2, 4781408845606248404L);
         entityBuilder.property("manager", PropertyType.String).id(3, 7690867523190230837L);
         entityBuilder.property("location", PropertyType.String).id(4, 2744616884151339034L);
-
-        entityBuilder.relation("players", 1, 5326776348677608839L, 1, 5234193046593124548L);
         entityBuilder.entityDone();
 
         return modelBuilder.build();

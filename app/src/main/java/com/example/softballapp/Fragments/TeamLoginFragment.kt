@@ -14,6 +14,7 @@ import android.widget.Spinner
 import com.example.softballapp.*
 import com.example.softballapp.Activities.TeamActivity
 import io.objectbox.kotlin.query
+import com.example.softballapp.Team
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -70,6 +71,7 @@ class TeamLoginFragment : Fragment() {
         //Login button listener
         login.setOnClickListener {
             val intent = Intent(activity, TeamActivity::class.java)
+            intent.putExtra("Team", spinner.selectedItem.toString())
             startActivity(intent)
         }
 

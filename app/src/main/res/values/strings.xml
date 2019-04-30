@@ -24,4 +24,17 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_drawer">DrawerActivity</string>
+    <string-array name="spinner_position">
+        <item>Catcher</item>
+        <item>Pitcher</item>
+        <item>First Base</item>
+        <item>Second Base</item>
+        <item>Third Base</item>
+        <item>Short Stop</item>
+        <item>Left Field</item>
+        <item>Left Center Field</item>
+        <item>Right Center Field</item>
+        <item>Right Field</item>
+        <item>None</item>
+    </string-array>
 </resources>

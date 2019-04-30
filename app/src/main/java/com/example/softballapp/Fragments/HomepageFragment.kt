@@ -4,10 +4,15 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentTransaction
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.softballapp.R
+import android.widget.Button
+import android.widget.TextView
+import com.example.softballapp.*
+import com.example.softballapp.Activities.TeamActivity
+import io.objectbox.kotlin.query
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -26,9 +31,11 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomepageFragment : Fragment() {
     // TODO: Rename and change types of parameters
+    lateinit var addPlayerFrag:AddPlayerFragment
     private var param1: String? = null
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
+    lateinit var act: TeamActivity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +43,7 @@ class HomepageFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        addPlayerFrag = AddPlayerFragment.newInstance()
     }
 
     override fun onCreateView(
@@ -43,7 +51,29 @@ class HomepageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_homepage, container, false)
+        val view = inflater.inflate(R.layout.fragment_homepage, container, false)
+        val addPlayerButton:Button = view.findViewById(R.id.addPlayer)
+        val testButton:Button = view.findViewById(R.id.playerNum)
+        val result:TextView = view.findViewById(R.id.textView2)
+        var teamBox = ObjectBox.boxStore.boxFor(Team::class.java)
+        var players:MutableList<String> = ArrayList()
+        val team = act.team
+
+
+        testButton.setOnClickListener {
+            val query = teamBox.query {
+                order(Team_.teamName)
+            }
+            val results = query.find()
+
+            result.text = team.players.size.toString()
+        }
+
+        addPlayerButton.setOnClickListener {
+            CreateFragment(addPlayerFrag)
+        }
+
+        return view
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -53,6 +83,7 @@ class HomepageFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+        act = context as TeamActivity
         if (context is OnFragmentInteractionListener) {
             listener = context
         } else {
@@ -79,6 +110,15 @@ class HomepageFragment : Fragment() {
     interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         fun onFragmentInteraction(uri: Uri)
+    }
+
+    fun CreateFragment(frag:Fragment){
+        fragmentManager!!
+            .beginTransaction()
+            .replace(R.id.contentTeam, frag)
+            .addToBackStack(frag.toString())
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .commit()
     }
 
     companion object {
